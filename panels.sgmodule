@@ -28,6 +28,9 @@ timecard = type=generic,timeout=10,script-path=https://raw.githubusercontent.com
 TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js ,argument=icon=arrow.up.arrow.down.circle&color=#5d84f8
 
 #網路詳情 标题显示为根节点名
+
+net-info-panel = script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Panel/Net-info-panel.js,type=generic,script-update-interval=0
+
 #应当修改的字段 group 代理策略组名称
 NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/net_info.js,argument=icon=externaldrive.connected.to.line.below&color=#9a7ff7&group=🐷 𝐏𝐫𝐨𝐱𝐲
 #IP地址
