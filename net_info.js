@@ -6,6 +6,7 @@
 // const { wifi, v4, v6 } = $network;
 const { wifi, v4} = $network;
 
+let url = "http://ip-api.com/json/?lang=zh-CN"
 let cellularInfo = '';
 
 const radioGeneration = {
