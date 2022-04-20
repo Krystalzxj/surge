@@ -39,7 +39,7 @@ let args = getArgs();
   let total = info.total;
   let expire = args.expire || info.expire;
   let content = [`使用：${bytesToSize(used)} | 总量：${bytesToSize(total)}`];
-  let content = [`剩余流量：${bytesToSize(total)}-${bytesToSize(used)}`];
+  let content = [`剩余流量：${bytesToSize(total-used)}`];
 
   if (resetDayLeft) {
     content.push(`重置：剩余${resetDayLeft}天`);
