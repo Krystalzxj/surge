@@ -31,7 +31,7 @@ timecard = type=generic,timeout=10,script-path=https://raw.githubusercontent.com
 #流量统计 点击以切换网络界面
 TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js ,argument=icon=arrow.up.arrow.down.circle&color=#5d84f8
 #机场
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=（你的机场订阅encode后)&title=（机场名）&icon= airplane.departure&color= #FCEFE8
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=（你的机场订阅encode后)&title=（机场名）&icon=airplane.departure&color=#FCEFE8
 
 #網路詳情 标题显示为根节点名
 
@@ -43,5 +43,4 @@ NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com
 #net_info_ip = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Panel/NetInfoPanel.js,script-update-interval=5
 
 # dns
-flushDNS = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=DNS FLush&icon= leaf.arrow.triangle.circlepath&color= #40DE5A
-
+flushDNS = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=DNS FLush&icon=leaf.arrow.triangle.circlepath&color=#40DE5A
