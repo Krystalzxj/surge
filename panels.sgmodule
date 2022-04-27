@@ -16,7 +16,7 @@ Sub_info = script-name=Sub_info,update-interval=60
 
 net-info-panel=title="网络状态",content="请刷新",style=info,script-name=net-info-panel
 
-net_info_ip=title=网络状态,style=info,script-name=net_info_ip,update-interval=3
+#net_info_ip=title=网络状态,style=info,script-name=net_info_ip,update-interval=3
 
 # flush DNS
 flushDNS = script-name=flushDNS, title="Flush DNS", content="请刷新", update-interval=600
@@ -31,7 +31,7 @@ timecard = type=generic,timeout=10,script-path=https://raw.githubusercontent.com
 #流量统计 点击以切换网络界面
 TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js ,argument=icon=arrow.up.arrow.down.circle&color=#5d84f8
 #机场
-Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=（你的机场订阅encode后)&title=（机场名）&icon=doc.text.below.ecg&color=#FFC0CB
+Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=（你的机场订阅encode后)&title=（机场名）&icon= airplane.departure&color= #FCEFE8
 
 #網路詳情 标题显示为根节点名
 
@@ -40,8 +40,8 @@ net-info-panel = script-path=https://raw.githubusercontent.com/ventusoon/ventus/
 #应当修改的字段 group 代理策略组名称
 NET_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/net_info.js,argument=icon=externaldrive.connected.to.line.below&color=#9a7ff7&group=🐷 𝐏𝐫𝐨𝐱𝐲
 #IP地址
-net_info_ip = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Panel/NetInfoPanel.js,script-update-interval=5
+#net_info_ip = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ventusoon/ventus/main/Panel/NetInfoPanel.js,script-update-interval=5
 
 # dns
-flushDNS = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=DNS FLush&icon=arrow.clockwise&color=#3d3d5b
+flushDNS = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/asset/flushDNS.js,argument=title=DNS FLush&icon= leaf.arrow.triangle.circlepath&color= #40DE5A
 
