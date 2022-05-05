@@ -31,7 +31,7 @@ if (!v4.primaryAddress && !v6.primaryAddress) {
     title: '无网络',
     content: '尚未连接网络\n请检查网络状态后重试',
     icon: 'wifi.exclamationmark',
-    'icon-color': '#CB1B45',
+    'icon-color': '#00E500',
   });
 } else {
   if ($network['cellular-data']) {
@@ -43,7 +43,7 @@ if (!v4.primaryAddress && !v6.primaryAddress) {
         '移动数据 | ' + radioGeneration[radio] + ' - ' + radio;
     }
   }
-  $httpClient.get('http://ip-api.com/json', function (error, response, data) {
+  $httpClient.get('http://ip-api.com/json/?lang=zh-CN', function (error, response, data) {
     if (error) {
       $done({
         title: '发生错误',
