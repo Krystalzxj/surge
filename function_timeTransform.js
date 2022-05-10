@@ -13,29 +13,31 @@ let icon_s = mitm_status.enabled&&rewrite_status.enabled&&scripting_status.enabl
 //if ($trigger == "button") await httpAPI("/v1/dns/flush");
 //点击按钮，重载配置（同时刷新dns）
 
-function formatDate(datetime) {
-		      var date = new Date(datetime)// 时间戳为10位需*1000，时间戳为13位的话不需乘1000
-		      var year = date.getFullYear()
-		      var month = ('0' + (date.getMonth() + 1)).slice(-2)
-		      var sdate = ('0' + date.getDate()).slice(-2)
-		      var hour = ('0' + date.getHours()).slice(-2)
-		      var minute = ('0' + date.getMinutes()).slice(-2)
-		      var second = ('0' + date.getSeconds()).slice(-2)
-		      // 拼接
-		      var result = year + '-' + month + '-' + sdate + ' ' + hour + ':' + minute + ':' + second
-		      // 返回
-		      return result
-		    };
+Date.prototype.Format = function (fmt) {
+    var o = {
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "H+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
 
-console.log(formatDate(dateTime))
-var date= console.log(formatDate(dateTime))
+var time1 = new Date().Format("yyyy-MM-dd HH:mm:ss");
+
 if ($trigger == "button") {
 	await httpAPI("/v1/profiles/reload");
 	$notification.post("配置重载","配置重载成功","")
 };
 $done({
     title:"Surge Pro® ✌(՞ټ՞ )✌",
-    content: "北京时间："+date+"\n启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    content: "北京时间："+time1+"\n启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.triangle",
    "icon-color":icon_s?"#f6c970":"#FF7500"
 });
