@@ -13,7 +13,7 @@ let icon_s = mitm_status.enabled&&rewrite_status.enabled&&scripting_status.enabl
 //if ($trigger == "button") await httpAPI("/v1/dns/flush");
 //点击按钮，重载配置（同时刷新dns）
 
-var myDate = new Date().Format("yyyy-MM-dd HH:mm:ss");
+var myDate = new Date();
 
 if ($trigger == "button") {
 	await httpAPI("/v1/profiles/reload");
@@ -21,7 +21,7 @@ if ($trigger == "button") {
 };
 $done({
     title:"Surge Pro® ✌(՞ټ՞ )✌",
-    content:myDate.toLocaleString()+"\n❦启动☞时长❥："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    content:"北京时间:"myDate.toLocaleString().Format("yyyy-MM-dd HH:mm:ss")+"\n❦启动☞时长❥："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.triangle",
    "icon-color":icon_s?"#f6c970":"#FF7500"
 });
