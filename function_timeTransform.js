@@ -13,14 +13,15 @@ let icon_s = mitm_status.enabled&&rewrite_status.enabled&&scripting_status.enabl
 //if ($trigger == "button") await httpAPI("/v1/dns/flush");
 //点击按钮，重载配置（同时刷新dns）
 
+var myDate = new Date();
 
 if ($trigger == "button") {
 	await httpAPI("/v1/profiles/reload");
 	$notification.post("配置重载","配置重载成功","")
 };
 $done({
-    title:"Surge Pro® ✌(՞ټ՞ )✌",
-    content:"❦启♛动☤时❧长❥："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    title:"Surge Pro®"+myDate.toLocaleString(),
+    content:"❦启动☞时长❥："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.triangle",
    "icon-color":icon_s?"#f6c970":"#FF7500"
 });
