@@ -29,7 +29,6 @@ Date.prototype.Format = function (fmt) {
     return fmt;
 }
 
-
 if ($trigger == "button") {
 	await httpAPI("/v1/profiles/reload");
 	$notification.post("配置重载","配置重载成功","")
@@ -37,8 +36,8 @@ if ($trigger == "button") {
 $done({
     title:"Surge Pro® ✌(՞ټ՞ )✌",
     content: "北京时间："+ (new Date()).Format("yyyy-MM-dd HH:mm:ss")+"\n启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
-    icon: icon_s?"face.smiling.fill":"exclamationmark.triangle",
-   "icon-color":icon_s?"#f6c970":"#FF7500"
+    icon: icon_s?"crown.fill":"exclamationmark.triangle",
+   "icon-color":icon_s?"#EACD76":"#F20C00"
 });
 })();
 function icon_status(status){
