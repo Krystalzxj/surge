@@ -13,7 +13,19 @@ let icon_s = mitm_status.enabled&&rewrite_status.enabled&&scripting_status.enabl
 //if ($trigger == "button") await httpAPI("/v1/dns/flush");
 //点击按钮，重载配置（同时刷新dns）
 
-var myDate = new Date();
+function formatDate(datetime) {
+		      var date = new Date(datetime)// 时间戳为10位需*1000，时间戳为13位的话不需乘1000
+		      var year = date.getFullYear()
+		      var month = ('0' + (date.getMonth() + 1)).slice(-2)
+		      var sdate = ('0' + date.getDate()).slice(-2)
+		      var hour = ('0' + date.getHours()).slice(-2)
+		      var minute = ('0' + date.getMinutes()).slice(-2)
+		      var second = ('0' + date.getSeconds()).slice(-2)
+		      // 拼接
+		      var result = year + '-' + month + '-' + sdate + ' ' + hour + ':' + minute + ':' + second
+		      // 返回
+		      return result
+		    };
 
 if ($trigger == "button") {
 	await httpAPI("/v1/profiles/reload");
@@ -21,7 +33,7 @@ if ($trigger == "button") {
 };
 $done({
     title:"Surge Pro® ✌(՞ټ՞ )✌",
-    content: "北京时间："+myDate.toLocaleTimeString()+"\n启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    content: "北京时间："+console.log(formatDate(dateTime))+"\n启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.triangle",
    "icon-color":icon_s?"#f6c970":"#FF7500"
 });
