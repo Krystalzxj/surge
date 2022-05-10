@@ -27,13 +27,15 @@ function formatDate(datetime) {
 		      return result
 		    };
 
+console.log(formatDate(dateTime))
+var date= console.log(formatDate(dateTime))
 if ($trigger == "button") {
 	await httpAPI("/v1/profiles/reload");
 	$notification.post("配置重载","配置重载成功","")
 };
 $done({
     title:"Surge Pro® ✌(՞ټ՞ )✌",
-    content: "北京时间："+console.log(formatDate(dateTime))+"\n启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    content: "北京时间："+date+"\n启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.triangle",
    "icon-color":icon_s?"#f6c970":"#FF7500"
 });
