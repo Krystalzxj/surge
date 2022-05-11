@@ -40,21 +40,22 @@ let args = getArgs();
   let expire = args.expire || info.expire;
   let content = [`使用：${bytesToSize(used)} | 总量：${bytesToSize(total)}`];
   if (resetDayLeft) {
-    content.push(`剩余：${bytesToSize(total-used)}|重置：剩余${resetDayLeft}天`);
+    content.push(`剩余：${bytesToSize(total-used)} | 重置：剩余${resetDayLeft}天`);
   }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
     content.push(`到期：${formatTime(expire)}`);
   }
-
+  var myDate = new Date();
   let now = new Date();
   let hour = now.getHours();
   let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
   hour = hour > 9 ? hour : "0" + hour;
   minutes = minutes > 9 ? minutes : "0" + minutes;
-
+  seconds = seconds > 9 ? seconds : "0" + seconds;
   $done({
-    title: `${args.title} | ${now} ${hour}:${minutes}`,
+    title: `${args.title} | `now.toLocaleDateString() `${hour}:${minutes}:${seconds}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
