@@ -40,7 +40,7 @@ let args = getArgs();
   let expire = args.expire || info.expire;
   let content = [`使用：${bytesToSize(used)} | 总量：${bytesToSize(total)}`];
   if (resetDayLeft) {
-    content.push(`剩余：${bytesToSize(total-used)} | 重置：剩余${resetDayLeft}天`);
+    content.push(`剩余：${bytesToSize(total-used)}|重置：剩余${resetDayLeft}天`);
   }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
@@ -54,7 +54,7 @@ let args = getArgs();
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} | ${hour}:${minutes}`,
+    title: `${args.title} | ${now} ${hour}:${minutes}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
