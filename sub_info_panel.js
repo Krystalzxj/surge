@@ -46,16 +46,19 @@ let args = getArgs();
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
     content.push(`到期：${formatTime(expire)}`);
   }
-  var myDate = new Date();
+  let month = now.getMonth();
+  let date = now.getDate();
   let now = new Date();
   let hour = now.getHours();
   let minutes = now.getMinutes();
   let seconds = now.getSeconds();
+  month = month > 9 ? month : "0" + month;
+  date = date > 9 ? date : "0" + date;
   hour = hour > 9 ? hour : "0" + hour;
   minutes = minutes > 9 ? minutes : "0" + minutes;
   seconds = seconds > 9 ? seconds : "0" + seconds;
   $done({
-    title: `${args.title} | `+now.toLocaleDateString()+ `${hour}:${minutes}:${seconds}`,
+    title: `${args.title} | ${month}月${date}日 ${hour}:${minutes}:${seconds}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
