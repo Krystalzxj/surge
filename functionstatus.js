@@ -35,7 +35,7 @@ if ($trigger == "button") {
 };
 $done({
     title:"Surge♚⏰:"+new Date().Format("yyyy-MM-dd HH:mm:ss"),
-    content: "启动时长："+startTime + "\n🚦:Mitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    content: "启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.triangle",
    "icon-color":icon_s?"#EACD76":"#F20C00"
 });
