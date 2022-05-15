@@ -36,7 +36,7 @@ Sub_info = script-name=Sub_info,update-interval=86400
   let proportion = used / total;
   let content = [`𝐔𝐬𝐞𝐝 : ${toPercent(proportion)} | 𝐀𝐯𝐥 : ${bytesToSize(total-used)}`];
 
-/*
+
   if (resetDayLeft) {
     content.push(`重置：剩余${resetDayLeft}天`);
   }
@@ -45,7 +45,7 @@ Sub_info = script-name=Sub_info,update-interval=86400
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
     content.push(`到期：${formatTime(expire)}`);
   }
-*/
+
   let now = new Date();
   let hour = now.getHours();
   let minutes = now.getMinutes();
