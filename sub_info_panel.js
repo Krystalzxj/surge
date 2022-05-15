@@ -39,7 +39,7 @@ let args = getArgs();
   let total = info.total;
   let expire = args.expire || info.expire;
   let proportion = (used / total)*100;
-  let content = [`使用:${bytesToSize(used)}(${Math.round(proportion)}) | 总量:${bytesToSize(total)}`];
+  let content = [`使用:${bytesToSize(used)}(${Math.round(proportion)}%) | 总量:${Math.round(bytesToSize(total))}`];
   if (resetDayLeft) {
     content.push(`剩余:${bytesToSize(total-used)} | 重置:剩余${resetDayLeft}天`);
   }
