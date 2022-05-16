@@ -1,0 +1,9 @@
+# name:大陆直连
+# author：tan
+# update：2022-05-16
+
+#emby
+DOMAIN,emby.misakaf.xyz
+
+#IPTV
+IP-CIDR, 39.135.138.59/32
