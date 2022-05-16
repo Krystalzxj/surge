@@ -4,6 +4,7 @@
 
 # pikpak
 
+DOMAIN-SUFFIX,mypikpak.com
 DOMAIN,access.mypikpak.com
 HOST-SUFFIX,mypikpak.com,PikPak
 HOST-SUFFIX,config.mypikpak.com,PikPak
