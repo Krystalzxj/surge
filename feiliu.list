@@ -1,4 +1,6 @@
-#分流规则
+# name: 大陆服务
+# author: 张军
+# update：2022-05-22
 
 # > 中华万年历广告
 DOMAIN-KEYWORD, lkme.cc
