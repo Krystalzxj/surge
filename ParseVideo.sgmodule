@@ -1,13 +1,14 @@
-// ==/UserScript==
+#!name= 快捷解析VIP视频
+#!desc=B爱优腾VIP
+
 [MITM]
 hostname=m.iqiyi.com,z1.m1907.cn,m.youku.com,m.v.qq.com,m.bilibili.com
-
 [URL Rewrite]
 # > 04 爱奇艺
-(^https?:\/\/m\.iqiyi\.com\/v_.*) url https://z1.m1907.cn/?jx=$1 307
+(^https?:\/\/m\.iqiyi\.com\/v_.*) https://z1.m1907.cn/?jx=$1 307
 # > 03 优酷视频
-(^https?:\/\/m\.youku\.com\/.*) url https://z1.m1907.cn/?jx=$1 307
+(^https?:\/\/m\.youku\.com\/.*) https://z1.m1907.cn/?jx=$1 307
 # > 02 腾讯视频
-(^https?:\/\/m\.v\.qq\.com\/x\/(m\/)?play.*) url https://z1.m1907.cn/?jx=$1 307
+(^https?:\/\/m\.v\.qq\.com\/x\/(m\/)?play.*) https://z1.m1907.cn/?jx=$1 307
 # > 01 哔哩哔哩
-(^https?:\/\/m\.bilibili\.com\/bangumi\/play\/.*) url https://z1.m1907.cn/?jx=$1 307
+(^https?:\/\/m\.bilibili\.com\/bangumi\/play\/.*) https://z1.m1907.cn/?jx=$1 307
