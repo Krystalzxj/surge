@@ -1,37 +1,3 @@
-# > 向日葵
-DOMAIN, dm.toutiao.com
-DOMAIN-KEYWORD, upload-cdn.orayimg.com
-DOMAIN, ddns.oray.com
-DOMAIN, sl-tk.oray.com
-DOMAIN, client-api.oray.com
-DOMAIN, push.oray.com
-DOMAIN-SUFFIX,offline-adv.oray.com
-DOMAIN-KEYWORD, upload-cdn.orayimg.com-upload-activity
-# > 小利生活
-DOMAIN-KEYWORD, mpos-pic.helipay.com
-# > 懂车帝
-DOMAIN-KEYWORD, p3-pack.byteimg.com
-DOMAIN-KEYWORD, p6-pack.byteimg.com
-# > 搜狗
-DOMAIN,indivi-cdn.shouji.sogou.com/wapdl/hole
-DOMAIN-SUFFIX,epro.sogou.com
-DOMAIN-SUFFIX,golden1.sogou.com
-DOMAIN-SUFFIX,inte.sogou.com
-DOMAIN-SUFFIX,inte.sogoucdn.com
-DOMAIN-SUFFIX,lu.sogoucdn.com
-DOMAIN-SUFFIX,theta.sogoucdn.com
-DOMAIN-SUFFIX,uranus.sogou.com
-DOMAIN-SUFFIX,123.sogou.com
-DOMAIN-SUFFIX,a1click.cpc.sogou.com
-DOMAIN-SUFFIX,adsence.sogou.com
-DOMAIN-SUFFIX,adstream.123.sogoucdn.com
-DOMAIN-SUFFIX,amfi.gou.sogou.com
-DOMAIN-SUFFIX,art.theta.sogoucdn.com
-DOMAIN-SUFFIX,athena.wan.sogou.com
-DOMAIN-SUFFIX,bazinga.mse.sogou.com
-DOMAIN-SUFFIX,bite.theta.sogoucdn.com
-DOMAIN-SUFFIX,brand.sogou.com
-DOMAIN-SUFFIX,bsiet.husky.sogou.com
 
 ## QQ音乐广告
 DOMAIN,tmeadcomm.y.qq.com
