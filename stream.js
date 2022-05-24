@@ -110,7 +110,7 @@ panel_result['content'] = content
         if (code === 'Not Available') {
           youtube_check_result += '不支持解锁'
         } else {
-          youtube_check_result += '已解锁，区域: ' +`${getFlagEmoji(code)} |` +code.toUpperCase()
+          youtube_check_result += '已解锁，区域: ' +`${getFlagEmoji(code)} | ` +code.toUpperCase()
         }
       })
       .catch((error) => {
@@ -166,7 +166,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += '已完整解锁，区域: '  +`${getFlagEmoji(code)} |`+ code.toUpperCase()
+        netflix_check_result += '已完整解锁，区域: '  +`${getFlagEmoji(code)} | `+ code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
