@@ -114,7 +114,7 @@ panel_result['content'] = content
         }
       })
       .catch((error) => {
-        youtube_check_result += '检测失败🚫，请刷新面板♻️'
+        youtube_check_result += '检测失败，请刷新面板🔄'
       })
   
     return youtube_check_result
@@ -185,7 +185,7 @@ panel_result['content'] = content
           netflix_check_result += '该节点不支持解锁⭕️'
           return
         }
-        netflix_check_result += '检测失败🚫，请刷新面板🔄'
+        netflix_check_result += '检测失败，请刷新面板🔄'
       })
   
     return netflix_check_result
