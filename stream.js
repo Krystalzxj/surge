@@ -174,7 +174,7 @@ panel_result['content'] = content
           return Promise.reject('Not Available')
         }
   
-        netflix_check_result += '仅解锁自制剧，区域: ' + code.toUpperCase()
+        netflix_check_result += '仅自制剧，区域: ' + `${getFlagEmoji(code)} | ` + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .catch((error) => {
