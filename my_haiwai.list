@@ -29,4 +29,5 @@ DOMAIN-KEYWORD,mypikpak
 DOMAIN,app-measurement.com
 #
 DOMAIN,txmov2.a.yximgs.com
-#
+#IP
+DOMAIN,cn-proxy.com
