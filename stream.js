@@ -35,7 +35,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
   ;(async () => {
     let panel_result = {
-      title: '📺流媒体解锁检测🔍',
+      title: '📺 流媒体解锁检测 🔍',
       content: '',
       icon: 'lock.open.desktopcomputer',
       'icon-color': '#FF2D55',
@@ -108,7 +108,7 @@ panel_result['content'] = content
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
-          youtube_check_result += '不支持解锁⭕️'
+          youtube_check_result += '不支持解锁🚫'
         } else {
           youtube_check_result += '已解锁，区域: ' +`${getFlagEmoji(code)} | ` + code.toUpperCase()
         }
@@ -182,7 +182,7 @@ panel_result['content'] = content
           return
         }
         if (error === 'Not Available') {
-          netflix_check_result += '该节点不支持解锁⭕️'
+          netflix_check_result += '该节点不支持解锁🚫'
           return
         }
         netflix_check_result += '检测失败，请刷新面板🔄'
