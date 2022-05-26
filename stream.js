@@ -289,6 +289,8 @@ panel_result['content'] = content
                 location: { countryCode },
               },
             } = data?.extensions?.sdk
+            //台湾旗没有改成中国🇨🇳
+            countryCode=(countryCode=="TW") ? "CN" : conutryCode
             resolve({ inSupportedLocation, countryCode, accessToken })
           })
         })
