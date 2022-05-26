@@ -38,12 +38,12 @@ Sub_info = script-name=Sub_info,update-interval=86400
 
 
   if (resetDayLeft) {
-    content.push(`重置：剩余${resetDayLeft}天`);
+    content.push(`𝑹𝒆𝒑𝒍𝒂𝒄𝒆：𝘽𝙚𝙡𝙚𝙛𝙩: 🧸 ${resetDayLeft}天`);
   }
 
   if (expire) {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`到期：${formatTime(expire)}`);
+    content.push(`𝑩𝒆𝒄𝒐𝒎𝒆 𝒅𝒖𝒆：${formatTime(expire)}`);
   }
 
   let now = new Date();
