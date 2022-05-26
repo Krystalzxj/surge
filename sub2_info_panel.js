@@ -38,7 +38,7 @@ Sub_info = script-name=Sub_info,update-interval=86400
 
 
   if (resetDayLeft) {
-    content.push(`重置：剩余${resetDayLeft}天`);
+    content.push(`𝑹𝒆𝒑𝒍𝒂𝒄𝒆：𝑩𝒆 𝒍𝒆𝒇𝒕: ♻️ ${resetDayLeft}天`);
   }
 
   if (expire) {
