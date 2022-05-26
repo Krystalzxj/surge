@@ -34,8 +34,8 @@ if ($trigger == "button") {
 	$notification.post("配置重载","配置重载成功","")
 };
 $done({
-    title:"Surge♚⏰"+new Date().Format("yyyy-MM-dd HH:mm:ss"),
-    content: "启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    title:"𝐒𝐮𝐫𝐠𝐞♚⏰"+new Date().Format("yyyy-MM-dd HH:mm:ss"),
+    content: "启动时长："+startTime + "\n𝐌𝐢𝐭𝐌:"+icon_status(mitm_status.enabled)+"  𝐑𝐞𝐰𝐫𝐢𝐭𝐞:"+icon_status(rewrite_status.enabled)+"  𝐒𝐜𝐫𝐢𝐩𝐭𝐢𝐧𝐠:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.triangle",
    "icon-color":icon_s?"#EACD76":"#F20C00"
 });
