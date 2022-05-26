@@ -34,10 +34,10 @@ if ($trigger == "button") {
 	$notification.post("配置重载","配置重载成功","")
 };
 $done({
-    title:"Surge👑Pro™ ",
-    content: "北京时间："+ (new Date()).Format("yyyy-MM-dd HH:mm:ss")+"\n启动时长："+startTime + "\nMitm:"+icon_status(mitm_status.enabled)+"  Rewrite:"+icon_status(rewrite_status.enabled)+"  Scripting:"+icon_status(scripting_status.enabled),
+    title:"«𝑺𝒖𝒓𝒈𝒆👑𝑷𝒓𝒐™» 🧚🏻‍♀️ ➺ ✌(՞ټ՞ )✌",
+    content: "北京时间："+ (new Date()).Format("yyyy-MM-dd HH:mm:ss")+"\n启动时长："+startTime + "\n𝑴𝒊𝒕𝒎:"+icon_status(mitm_status.enabled)+"  𝑹𝒆𝒘𝒓𝒊𝒕𝒆:"+icon_status(rewrite_status.enabled)+"  𝑺𝒄𝒓𝒊𝒑𝒕𝒊𝒏𝒈:"+icon_status(scripting_status.enabled),
     icon: icon_s?"crown.fill":"exclamationmark.triangle",
-   "icon-color":icon_s?"#EACD76":"#F20C00"
+   "icon-color":icon_s?"#e9e4d4":"#bbcdc5"
 });
 })();
 function icon_status(status){
