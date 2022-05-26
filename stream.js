@@ -51,7 +51,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="Disney+: 已解锁 ➺ " +`${getFlagEmoji(region)} | ` + region.toUpperCase()
+        𝒅𝒊𝒔𝒏𝒆𝒚_𝒓𝒆𝒔𝒖𝒍𝒕="𝑫𝒊𝒔𝒏𝒆𝒚+: 已解锁 ➺ " +`${getFlagEmoji(region)} | ` + region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
@@ -103,7 +103,7 @@ panel_result['content'] = content
       })
     }
   
-    let youtube_check_result = 'YouTube: '
+    let 𝒚𝒐𝒖𝒕𝒖𝒃𝒆_𝒄𝒉𝒆𝒄𝒌_𝒓𝒆𝒔𝒖𝒍𝒕 = '𝒀𝒐𝒖𝑻𝒖𝒃𝒆: '
   
     await inner_check()
       .then((code) => {
@@ -159,7 +159,7 @@ panel_result['content'] = content
       })
     }
   
-    let netflix_check_result = 'Netflix: '
+    let 𝒏𝒆𝒕𝒇𝒍𝒊𝒙_𝒄𝒉𝒆𝒄𝒌_𝒓𝒆𝒔𝒖𝒍𝒕 = '𝑵𝒆𝒕𝒇𝒍𝒊𝒙: '
   
     await inner_check(81215567)
       .then((code) => {
