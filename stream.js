@@ -32,9 +32,9 @@ function getFlagEmoji(region) {
 
 Date.prototype.Format = function (fmt) {
     var o = {
-        "H+": this.getHours(), //小时 
-        "m+": this.getMinutes(), //分 
-        "s+": this.getSeconds(), //秒 
+        "H+": this.getHours(), 
+        "m+": this.getMinutes(),
+        "s+": this.getSeconds(),
     };
     if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
     for (var k in o)
