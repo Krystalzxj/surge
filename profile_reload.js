@@ -10,8 +10,8 @@ $httpAPI("POST", "/v1/profiles/reload", {}, data => {
    minutes = minutes > 9 ? minutes : "0" + minutes;
    seconds = seconds > 9 ? seconds : "0" + seconds;
     $done({
-        title:"🔄 配置重载 ✔️",
-        content:"Last runtime 🕰:  "+hour+":"+minutes+":"+seconds,
+        title:"配置重载 🍑🍗🍔🍟🍩🍯",
+        content:"🕰 𝑳𝒂𝒔𝒕 𝒓𝒖𝒏𝒕𝒊𝒎𝒆 :  "+hour+":"+minutes+":"+seconds,
         icon:"leaf.arrow.triangle.circlepath",
         "icon-color": "#00E500",
      })
