@@ -48,10 +48,10 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
   ;(async () => {
     let panel_result = {
-      title: '📺 流媒体检测 ⏰ ' + new Date().Format("HH:mm:ss"),
+      title: '📺 𝑺𝒕𝒓𝒆𝒂𝒎𝒊𝒏𝒈 𝒖𝒏𝒍𝒐𝒄𝒌𝒊𝒏𝒈 ⏰ ' + new Date().Format("HH:mm:ss"),
       content: '',
       icon: '4k.tv.fill',
-      'icon-color': '#F20C00',
+      'icon-color': '#FF2D55',
     }
   let [{ region, status }] = await Promise.all([testDisneyPlus()])
     await Promise.all([check_youtube_premium(),check_netflix()])
@@ -60,17 +60,17 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="𝓓𝓲𝓼𝓷𝓮𝔂+: 即将登陆~"+region.toUpperCase()
+        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+: 即将登陆~"+region.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="𝓓𝓲𝓼𝓷𝓮𝔂+: 已解锁 ➠ " +`${getFlagEmoji(region)} | ` + region.toUpperCase()
+        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+: «已解锁𝘿+» ➺ " +`${getFlagEmoji(region)}  ` + region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="𝓓𝓲𝓼𝓷𝓮𝔂+: 未支持 🚫 "
+        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+: 未支持 🚫 "
       } else if (status==STATUS_TIMEOUT) {
-        disney_result="𝓓𝓲𝓼𝓷𝓮𝔂+: 检测超时 🚦"
+        disney_result="𝑫𝒊𝒔𝒏𝒆𝒚+: 检测超时 🚦"
       }
 result.push(disney_result)
 console.log(result)
@@ -116,14 +116,14 @@ panel_result['content'] = content
       })
     }
   
-    let youtube_check_result = '𝐘𝐨𝐮𝐓𝐮𝐛𝐞: '
+    let youtube_check_result = '𝙔𝙤𝙪𝙏𝙪𝙗𝙚: '
   
     await inner_check()
       .then((code) => {
         if (code === 'Not Available') {
           youtube_check_result += '不支持解锁🚫'
         } else {
-          youtube_check_result += '已解锁 ➠ ' +`${getFlagEmoji(code)} | `+ code.toUpperCase()
+          youtube_check_result += '«已解锁𝙋𝙧𝙚𝙢𝙞𝙪𝙢» ➺ ' +`${getFlagEmoji(code)}  `+ code.toUpperCase()
         }
       })
       .catch((error) => {
@@ -172,14 +172,14 @@ panel_result['content'] = content
       })
     }
   
-    let netflix_check_result = '𝐍𝐄𝐓𝐅𝐋𝐈𝐗: '
+    let netflix_check_result = 'ɴᴇᴛғʟɪx: '
   
     await inner_check(81215567)
       .then((code) => {
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += '已完整解锁 ➠ '  +`${getFlagEmoji(code)} | ` + code.toUpperCase()
+        netflix_check_result += '«已完整解锁𝙉𝙁𝙇𝙓» ➺ '  +`${getFlagEmoji(code)}  ` + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
