@@ -39,13 +39,13 @@ let args = getArgs();
   let total = info.total;
   let expire = args.expire || info.expire;
   
-  let content = [`使用:${bytesToSize(used)} | 总量:${bytesToSize(total)}`];
+  let content = [`𝑼𝒔𝒆:${bytesToSize(used)} | 𝑻𝒐𝒕𝒂𝒍 𝒄𝒂𝒑𝒂𝒄𝒊𝒕𝒚:${bytesToSize(total)}`];
   if (resetDayLeft) {
-    content.push(`剩余:${bytesToSize(total-used)} | 重置:剩余${resetDayLeft}天`);
+    content.push(`𝑩𝒆 𝒍𝒆𝒇𝒕:${bytesToSize(total-used)} | 𝑹𝒆𝒑𝒍𝒂𝒄𝒆:𝑩𝒆 𝒍𝒆𝒇𝒕${resetDayLeft}天`);
   }
   if (expire && expire !== "false") {
     if (/^[\d.]+$/.test(expire)) expire *= 1000;
-    content.push(`到期：${formatTime(expire)}`);
+    content.push(`𝑩𝒆𝒄𝒐𝒎𝒆 𝒅𝒖𝒆：${formatTime(expire)}`);
   }
  
   let now = new Date();
@@ -56,7 +56,7 @@ let args = getArgs();
   minutes = minutes > 9 ? minutes : "0" + minutes;
   seconds = seconds > 9 ? seconds : "0" + seconds;
   $done({
-    title: `${args.title} | 🕰：${hour}:${minutes}:${seconds}`,
+    title: `${args.title} | ⏰ ：${hour}:${minutes}:${seconds}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
